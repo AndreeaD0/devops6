@@ -1,19 +1,19 @@
-#Python CircleCI 2.0 confirguration file
-  version: 2.1
-  parameters:
-    GHA_Event:
-      type: string
-      default: ""
-    GHA_Actor:
-      type: string
-      default: ""
-    GHA_Action:
-      type: string
-      default: ""
-    GHA_Meta:
-      type: string
-      default: ""
-  jobs:
+version: 2.1
+parameters:
+  GHA_Event:
+    type: string
+    default: ""
+  GHA_Actor:
+    type: string
+    default: ""
+  GHA_Action:
+    type: string
+    default: ""
+  GHA_Meta:
+    type: string
+    default: ""
+
+jobs:
     build:
       docker:
         - image: circleci/python:3.7
@@ -25,8 +25,9 @@
         - run:
             name: install dependencies
             command: |
+              ls -l 
+              ls -al
               pwd      
-              ls -a -l
               python3 -m venv venv
               . venv/bin/activate
               /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
@@ -44,10 +45,9 @@
         - store_artifacts:
             path: test-results
 
-  workflows:
-    push:
+workflows:
+  push:
 #    when:
 #      equal: [ "push", << pipeline.parameters.GHA_Event >>]
-      jobs:  
-        - build                         
-        
+    jobs:  
+      - build 
