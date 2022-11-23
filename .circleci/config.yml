@@ -25,8 +25,8 @@ jobs:
         - run:
             name: install dependencies
             command: |
-              ls -la
-              pwd      
+              pwd     
+              ls -la 
               python3 -m venv venv
               . venv/bin/activate
               /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
