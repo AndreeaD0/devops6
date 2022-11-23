@@ -27,12 +27,12 @@ jobs:
             command: |
               ls -a
               pwd  
+              /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
               pip install --upgrade virtualenv
               ls -l         
               python3 -m venv venv
               pwd 
               . venv/bin/activate
-              /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
               pip install -r myreq.txt
                   # Run coding convention software plus tester
         - run:
