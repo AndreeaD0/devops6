@@ -26,7 +26,7 @@
             name: install dependencies
             command: |
               pwd      
-              ls -al
+              ls -a -l
               python3 -m venv venv
               . venv/bin/activate
               /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
