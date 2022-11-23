@@ -27,8 +27,9 @@ jobs:
             command: |
               ls -a
               pwd  
+              pip install --upgrade virtualenv
               ls -l         
-              sudo python3 -m venv venv
+              python3 -m venv venv
               pwd 
               . venv/bin/activate
               /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
