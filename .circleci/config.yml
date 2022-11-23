@@ -42,3 +42,11 @@
             path: test-results
         - store_artifacts:
             path: test-results
+
+  workflows:
+    push:
+#    when:
+#      equal: [ "push", << pipeline.parameters.GHA_Event >>]
+      jobs:  
+        - build                         
+        
