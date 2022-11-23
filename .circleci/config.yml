@@ -1,5 +1,18 @@
 #Python CircleCI 2.0 confirguration file
   version: 2.1
+  parameters:
+    GHA_Event:
+      type: string
+      default: ""
+    GHA_Actor:
+      type: string
+      default: ""
+    GHA_Action:
+      type: string
+      default: ""
+    GHA_Meta:
+      type: string
+      default: ""
   jobs:
     build:
       docker:
