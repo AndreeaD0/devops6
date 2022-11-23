@@ -25,9 +25,11 @@ jobs:
         - run:
             name: install dependencies
             command: |
-              pwd     
-              ls -la 
+              ls -a
+              pwd  
+              ls -l         
               sudo python3 -m venv venv
+              pwd 
               . venv/bin/activate
               /home/circleci/project/venv/bin/python3 -m pip install --upgrade pip
               pip install -r myreq.txt
@@ -46,7 +48,5 @@ jobs:
 
 workflows:
   push:
-#    when:
-#      equal: [ "push", << pipeline.parameters.GHA_Event >>]
     jobs:  
       - build 
