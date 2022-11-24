@@ -27,9 +27,8 @@ jobs:
             command: |
               ls -a
               pwd  
-              sudo apt-get install python3-venv --fix-missing
-                  #         pip install --upgrade virtualenv
-              ls -l         
+               # sudo apt-get install python3-venv --fix-missing
+                  #         pip install --upgrade virtualenv 
               python3 -m venv venv
               pwd 
               . venv/bin/activate
