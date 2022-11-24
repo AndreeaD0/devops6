@@ -16,7 +16,7 @@ parameters:
 jobs:
     build:
       docker:
-        - image: circleci/python:3.7
+        - image: circleci/python:3.10
       working_directory: /home/circleci/project
       steps:
                   # Obtain repo from the GitHub
