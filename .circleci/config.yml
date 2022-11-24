@@ -28,7 +28,7 @@ jobs:
               ls -a
               pwd  
               sudo apt-get install python3-venv --fix-missing
-                   #         pip install --upgrade virtualenv
+                     #         pip install --upgrade virtualenv
               ls -l         
               python3 -m venv venv
               pwd 
